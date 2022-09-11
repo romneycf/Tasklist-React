@@ -1,0 +1,29 @@
+.container {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    margin-right: 18px;
+  }
+  .error {
+    margin-top: 4px;
+    color: var(--color-error);
+    font-size: 12px;
+    position: absolute;
+    top: 36px;
+    left: 8px;
+  }
+  
+  .addButton {
+    min-width: 240px;
+  }
+  

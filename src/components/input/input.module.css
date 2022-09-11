@@ -1,0 +1,17 @@
+.input {
+    background-color: #fff;
+    color: #000;
+    border-radius: var(--border-radius);
+    padding: var(--padding-md);
+    outline: none;
+    border: unset;
+    transition: all 0.2s ease-in-out;
+    height: 19px;
+    font-size: 14px;
+  }
+    
+  .input:active,
+  .input:focus {
+    outline: 1px solid var(--color-primary);
+  }
+  
