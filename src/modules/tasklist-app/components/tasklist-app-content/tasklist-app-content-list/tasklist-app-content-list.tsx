@@ -7,7 +7,6 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faSquareCheck } from "@fortawesome/free-regular-svg-icons";
 
-
 export default function TaskListAppContentList({
   list,
   setList,
@@ -25,17 +24,20 @@ export default function TaskListAppContentList({
     <div className={style.container}>
       {list.map((item, index) => (
         <li className={style.lista} key={index}>
-          <input type="checkbox" />
-          <FontAwesomeIcon className={style.status} icon={faMinus} />
-          <FontAwesomeIcon icon={faSquareCheck} />
-          {item.task}
-          <Button
-            className={style.trashButton}
-            onClick={handleTrashButton(index)}
-          >
-            <FontAwesomeIcon icon={faTrashAlt} />
-          </Button>
-          <hr className={style.divider}></hr>
+          <div className={style.list_description_wrapper}>
+            <input type="checkbox" />
+            <FontAwesomeIcon className={style.status} icon={faMinus} />
+            <FontAwesomeIcon icon={faSquareCheck} />
+            {item.task}
+          </div>
+          <div className={style.list_buttons_wrapper}>
+            <Button
+              className={style.trashButton}
+              onClick={handleTrashButton(index)}
+            >
+              <FontAwesomeIcon icon={faTrashAlt} />
+            </Button>
+          </div>
         </li>
       ))}
     </div>

@@ -9,7 +9,6 @@
   background-color: var(--background-color);
   color: var(--color-error);
   border-radius: var(--border-radius);
-  padding: var(--padding-md);
   border: 1px solid grey;
   transition: all 0.2s ease-in-out;
 }
@@ -27,12 +26,15 @@
 }
 
 .lista{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
   list-style-type: none;
   color: green;
-  width: 100%;
-  
-}
+  width: 100% !important;
+  border-bottom: 1px solid #e8e8e8;
 
+}
 
 .status {
   height: 10px;
@@ -59,5 +61,6 @@
 } */
 
 .divider{
+  color: #e8e8e8;
   width: 100%;
 }
