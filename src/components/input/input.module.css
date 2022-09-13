@@ -8,6 +8,7 @@
     transition: all 0.2s ease-in-out;
     height: 19px;
     font-size: 14px;
+    width:100%;
   }
     
   .input:active,

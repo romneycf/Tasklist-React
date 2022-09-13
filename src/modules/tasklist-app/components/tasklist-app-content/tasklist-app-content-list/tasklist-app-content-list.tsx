@@ -16,6 +16,8 @@ export default function TaskListAppContentList({
   list: TaskItem[];
   setList: React.Dispatch<React.SetStateAction<TaskItem[]>>;
 }) {
+
+
   const handleTrashButton = (index: number) => () => {
     const newlist = [...list];
     newlist.splice(index, 1);
@@ -23,8 +25,20 @@ export default function TaskListAppContentList({
   };
 
   const handleEditButton = (index: number) => () => {  
-    console.log(list[index]);
-    list[index].disabled = false;
+    const newlist = [...list];
+    if (newlist[index].disabled === true) {
+      newlist[index].disabled = false;
+    } else {
+      newlist[index].disabled = true;
+    }
+    setList(newlist);
+    
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {  
+    const newlist = [...list];
+    newlist[Number(event.target.id)].task = event.target.value;
+    setList(newlist);
     
   };
 
@@ -36,7 +50,7 @@ export default function TaskListAppContentList({
             <input type="checkbox" />
             <FontAwesomeIcon className={style.status} icon={faMinus} />
             <FontAwesomeIcon icon={faSquareCheck} />
-            <Input value={item.task} disabled={item.disabled}>
+            <Input id={index.toString()} onChange={handleInputChange} value={item.task} disabled={item.disabled}>
             </Input>
           </div>
           <div className={style.list_buttons_wrapper}>

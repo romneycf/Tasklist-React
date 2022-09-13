@@ -3,10 +3,11 @@
 }
 
 .list_description_wrapper{
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   flex-direction: row;
+  width:100%;
 }
 
 .list_buttons_wrapper{
