@@ -1,8 +1,21 @@
 .container {
-  /* border: 1px solid purple; */
+  border: 1px solid purple;
+}
+
+.list_description_wrapper{
+  border: 1px solid green;
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.list_buttons_wrapper{
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .trashButton {
@@ -25,10 +38,29 @@
   background-color: #97322d;
 }
 
+.editButton {
+  background-color: var(--background-color);
+  color: var(--color-error);
+  border-radius: var(--border-radius);
+  border: 1px solid grey;
+  transition: all 0.2s ease-in-out;
+}
+
+.editButton:hover {
+  cursor: pointer;
+  color: var(--color-text-error);
+  background-color: var(--color-error);
+}
+
+.editButton:active {
+  cursor: pointer;
+  transition: all 0s ease-out;
+  background-color: #97322d;
+}
+
 .lista{
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   list-style-type: none;
   color: green;
   width: 100% !important;

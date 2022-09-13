@@ -33,6 +33,7 @@ export default function TasklistAppHeader({
         addNewTaskItem({
             state: "PENDING",
             task: task.trim(),
+            disabled: true,
         });
         setTask("");
     };
